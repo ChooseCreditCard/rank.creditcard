@@ -2,41 +2,245 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Redirecting…</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Fast redirect -->
-  <meta http-equiv="refresh"
-        content="0.2; url=https://choose.creditcard/?utm_source=rank.creditcard&utm_medium=redirect&utm_campaign=creditcard_collection">
+  <title>Rank.Creditcard – How Credit-Card Rankings Are Built</title>
+  <meta name="description" content="Understand how neutral credit-card rankings are constructed: metrics, scoring, weighting and category design. Documentation-style overview, not recommendations or approval advice." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://rank.creditcard/" />
 
-  <!-- Canonical -->
-  <link rel="canonical"
-        href="https://choose.creditcard/?utm_source=rank.creditcard&utm_medium=redirect&utm_campaign=creditcard_collection" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Rank.Creditcard – Credit-Card Rankings Explained" />
+  <meta property="og:description" content="Learn how card rankings and leaderboards are built using clear metrics for pricing, rewards, protections and technology — without declaring any universal 'best' card." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rank.creditcard/" />
+  <meta property="og:image" content="https://choose.creditcard/preview.png?utm_source=rank.creditcard&utm_medium=referral&utm_campaign=og_image" />
 
-  <!-- Prevent indexing -->
-  <meta name="robots" content="noindex,follow" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rank.Creditcard – Credit-Card Rankings Explained" />
+  <meta name="twitter:description" content="Neutral explanation of how credit-card rankings, lists and leaderboards are constructed from documentation and metrics." />
+  <meta name="twitter:image" content="https://choose.creditcard/preview.png?utm_source=rank.creditcard&utm_medium=referral&utm_campaign=twitter_image" />
 
   <!-- GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-64FE63JQ3H"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-64FE63JQ3H', {
-      'page_title': 'Redirect rank.creditcard',
-      'page_path': '/redirect/rank.creditcard'
-    });
+    gtag('config', 'G-64FE63JQ3H');
   </script>
 
-  <!-- Dark background -->
-  <style>
-    html, body {
-      background: #020617;
-      color: #020617;
-      margin: 0;
-      height: 100vh;
-    }
-  </style>
-</head>
-<body></body>
-</html>
+  <!-- Tailwind for utility classes -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
+  <!-- Shared minisite styles -->
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="bg-slate-950 text-slate-100">
+  <header class="site-header">
+    <div class="nav-inner max-w-6xl">
+      <div class="brand">
+        <div class="cc-logo">CC</div>
+        <div class="brand-text">
+          <div class="brand-title">Rank.Creditcard</div>
+          <div class="brand-subtitle">Credit-Card Rankings Explained</div>
+        </div>
+      </div>
+      <nav class="nav-links" aria-label="Page navigation">
+        <a href="#overview">Overview</a>
+        <a href="#mechanics">How It Works</a>
+        <a href="#compare">Metrics</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="cc-page">
+    <!-- Breadcrumb -->
+    <div class="cc-breadcrumb">
+      <a href="https://choose.creditcard/?utm_source=rank.creditcard&utm_medium=referral&utm_campaign=breadcrumb">Home</a>
+      &nbsp;›&nbsp;
+      Rank.Creditcard
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>How Credit-Card Rankings and Lists Are Constructed</h1>
+        <p class="hero-lead">
+          “Top 10” and “best card” lists are everywhere, but the underlying ranking logic is rarely explained. This page shows how neutral card rankings can be built from documentation and metrics — without telling anyone what they personally should choose.
+        </p>
+        <a class="cta" href="https://choose.creditcard/rewards/?utm_source=rank.creditcard&utm_medium=referral&utm_campaign=hero_cta">
+          Explore Rewards &amp; Points guides
+        </a>
+      </div>
+    </section>
+
+    <!-- Overview -->
+    <section id="overview" class="section">
+      <h2>What Does It Mean to Rank Credit Cards?</h2>
+      <p>Ranking credit cards means placing them in an ordered list based on one or more criteria: for example rewards density, pricing, protections or technology features. A transparent ranking shows which metrics were used and how they were combined.</p>
+      <p>Neutral ranking is different from personal recommendations. It describes how a set of cards scores on defined metrics. It does not claim that the top-ranked card is “best” for everyone or that anyone will be approved for a specific product.</p>
+    </section>
+
+    <!-- Mechanics -->
+    <section id="mechanics" class="section">
+      <h2>From Metrics to Scores to Rankings</h2>
+      <p>Most ranking systems follow a simple sequence, even if they do not state it explicitly:</p>
+      <ul class="list">
+        <li><strong>1. Define the scope</strong> – choose which cards belong in the list (for example travel rewards or cashback products).</li>
+        <li><strong>2. Select metrics</strong> – reward earn rates, annual fees, APR bands, protections, technology support and more.</li>
+        <li><strong>3. Normalize data</strong> – express inputs in comparable units (for example per-unit-of-spend rewards, yearly fee cost).</li>
+        <li><strong>4. Assign weights</strong> – decide how much each metric influences the overall score.</li>
+        <li><strong>5. Calculate scores &amp; order</strong> – combine metrics into a score and sort cards from high to low.</li>
+      </ul>
+      <p>The more clearly each step is documented, the easier it is for readers to interpret the final ranking as structured information rather than advice.</p>
+    </section>
+
+    <section class="section">
+      <h2>Choosing Metrics for Rewards &amp; Points</h2>
+      <p>In rewards-focused contexts, ranking logic often revolves around how efficiently cards generate points, miles or cashback, before considering costs and risk. Common metrics include:</p>
+      <ul class="list">
+        <li><strong>Base earn rate</strong> – points, miles or cashback per unit of general spend.</li>
+        <li><strong>Bonus categories</strong> – higher earn rates on travel, groceries, fuel or online spend.</li>
+        <li><strong>Caps and thresholds</strong> – where earn rates change or drop after a certain volume.</li>
+        <li><strong>Redemption flexibility</strong> – options to use points for travel, statement credits or transfers.</li>
+      </ul>
+      <p>A neutral rewards ranking explains both the upside (earn potential) and the structural trade-offs (caps, complexity and devaluation risk).</p>
+    </section>
+
+    <section class="section">
+      <h2>Limitations and Biases in Rankings</h2>
+      <p>All rankings have limitations. They depend on data sources, assumptions and the metrics chosen. Neutral documentation acknowledges that:</p>
+      <ul class="list">
+        <li>No single list can capture every individual use-case.</li>
+        <li>Some metrics are hard to quantify, such as customer service quality.</li>
+        <li>Terms change over time, so rankings represent a snapshot, not a permanent state.</li>
+      </ul>
+      <p>This is why rankings should be treated as structured summaries of documentation — not as personalized guidance or guarantees of future value.</p>
+    </section>
+
+    <!-- Comparison / metrics table -->
+    <section id="compare" class="section">
+      <h2>Typical Inputs to a Card-Ranking Model</h2>
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Dimension</th>
+              <th>Example Metric</th>
+              <th>How It Affects Rank</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Rewards Density</td>
+              <td>Average points or cashback per unit of modeled spend</td>
+              <td>Higher earn rates can push a card up in rewards-focused rankings.</td>
+            </tr>
+            <tr>
+              <td>Annual Cost</td>
+              <td>Annual fee plus typical FX and usage fees</td>
+              <td>Higher costs can reduce the net value of rewards.</td>
+            </tr>
+            <tr>
+              <td>Protections</td>
+              <td>Number and scope of included protections</td>
+              <td>Broader coverage can improve relative positioning for risk-aware users.</td>
+            </tr>
+            <tr>
+              <td>Technology</td>
+              <td>Wallet support, virtual cards, controls, alerts</td>
+              <td>Strong digital features can be treated as a positive factor.</td>
+            </tr>
+            <tr>
+              <td>Complexity</td>
+              <td>Number of tiers, caps, conditions</td>
+              <td>More complexity may reduce score in simplicity-oriented models.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small">
+        For examples of rewards- and points-focused comparisons built on documented metrics, visit
+        <a href="https://choose.creditcard/rewards/?utm_source=rank.creditcard&utm_medium=referral&utm_campaign=comparison_section">
+          the Rewards &amp; Points hub on Choose.Creditcard
+        </a>.
+      </p>
+    </section>
+
+    <!-- Cluster links -->
+    <section class="section">
+      <h2>Explore Related Ranking &amp; List Microsites</h2>
+      <div class="cluster-grid">
+        <a class="cluster-card" href="https://list.creditcard/?utm_source=rank.creditcard&utm_medium=referral&utm_campaign=cluster_list">
+          <h3>List.Creditcard</h3>
+          <p>How card lists and roundups are structured.</p>
+        </a>
+        <a class="cluster-card" href="https://point.creditcard/?utm_source=rank.creditcard&utm_medium=referral&utm_campaign=cluster_point">
+          <h3>Point.Creditcard</h3>
+          <p>Points-based rewards structures and conversions.</p>
+        </a>
+        <a class="cluster-card" href="https://collect.creditcard/?utm_source=rank.creditcard&utm_medium=referral&utm_campaign=cluster_collect">
+          <h3>Collect.Creditcard</h3>
+          <p>Collecting points and miles across ecosystems.</p>
+        </a>
+        <a class="cluster-card" href="https://swap.creditcard/?utm_source=rank.creditcard&utm_medium=referral&utm_campaign=cluster_swap">
+          <h3>Swap.Creditcard</h3>
+          <p>Swapping rewards between programs and partners.</p>
+        </a>
+        <a class="cluster-card" href="https://evaluate.creditcard/?utm_source=rank.creditcard&utm_medium=referral&utm_campaign=cluster_evaluate">
+          <h3>Evaluate.Creditcard</h3>
+          <p>Neutral evaluation framework for card products.</p>
+        </a>
+        <a class="cluster-card" href="https://benchmark.creditcard/?utm_source=rank.creditcard&utm_medium=referral&utm_campaign=cluster_benchmark">
+          <h3>Benchmark.Creditcard</h3>
+          <p>How benchmarks and peer groups are defined.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Collection section -->
+    <section class="section">
+      <h2>Part of The CreditCard Collection</h2>
+      <p class="small">
+        Rank.Creditcard is one spoke in <strong>The CreditCard Collection</strong> — a network of focused microsites operated by ronarn AS. Each site explains one concept in clear, factual language and then connects you to independent comparison tools.
+      </p>
+      <p class="small">
+        We do not issue cards and we do not provide personalized “best card” recommendations. We document how rankings and metrics work so readers can interpret lists and guides with more context.
+      </p>
+      <p class="small">
+        This site is informational only and does not provide financial, investment, tax or legal advice. Always rely on official product documentation and consider seeking independent advice if needed.
+      </p>
+
+      <!-- Rewards hub snippet -->
+      <p class="text-xs text-slate-500 mt-6">
+        For a broader overview of reward structures, visit the
+        <a href="https://choose.creditcard/rewards/?utm_source=rank.creditcard&utm_medium=referral&utm_campaign=hub_rewards"
+           class="font-medium hover:text-slate-900">
+          Rewards &amp; Points hub
+        </a>
+        on <a href="https://choose.creditcard/" class="font-medium hover:text-slate-900">Choose.Creditcard</a>.
+      </p>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="section">
+      <h2>Ready to See Rankings in Context?</h2>
+      <p class="small">
+        Use Rank.Creditcard to understand how rankings and lists are structured — then explore the Rewards &amp; Points hub on Choose.Creditcard to see how metrics are applied to real-world product categories.
+      </p>
+      <a class="cta" href="https://choose.creditcard/rewards/?utm_source=rank.creditcard&utm_medium=referral&utm_campaign=bottom_cta">
+        Go to the Rewards &amp; Points hub
+      </a>
+    </section>
+  </main>
+
+  <footer class="mini-footer">
+    <p class="mini-footer-main">© 2025 The CreditCard Collection — ronarn AS</p>
+    <p class="mini-footer-contact">
+      Contact: <a href="mailto:support@cc.creditcard">support@cc.creditcard</a>
+    </p>
+  </footer>
+</body>
+</html>
